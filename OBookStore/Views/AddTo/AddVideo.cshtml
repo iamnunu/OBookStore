@@ -1,0 +1,74 @@
+﻿@page
+@{
+}
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+
+<div>
+    <form id="form-addvideo">
+    <table>
+
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name"/></td>
+            </tr>
+             <tr>
+                <td>Object</td>
+                <td><input type="number" name="object"/></td>
+            </tr>
+            <tr>
+                <td>Caption</td>
+                <td><input type="text" name="Caption"/></td>
+            </tr>
+            <tr>
+                <td>Thumbnail</td>
+                <td>
+                    <input type="file" name="Thumbnail"/>
+                </td>
+            </tr>
+             <tr>
+                <td>Path</td>
+                <td>
+                    <input type="text" name="Path"/>
+                </td>
+            </tr>
+              <tr>
+                <td>Tags</td>
+                <td>
+                    <input type="text" name="Tags"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>
+                    <input type="text" name="Categories"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        </form>
+   
+    <button type="button" id="save" >Save</button>
+
+</div>
+
+
+<script>
+    $(document).on('click', '#save', function (e) {
+        var data = $("#form-addvideo").serialize();
+        $.ajax({
+            data: data,
+            type: "post",
+            url: "/AddTo/AddVideoRow",
+            success: function (data) {
+                alert("Data Save: " + data);
+            }
+        });
+    });
+    
+</script>

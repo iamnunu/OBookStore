@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{782C7655-CD6B-43EE-BC2A-783B0854A858}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OBookStore/Views/Learning/index.cshtml">
+    <Files>
+      <File FileName="OBookStore/Controllers/AddToController.cs" Line="17" Column="9" />
+      <File FileName="OBookStore/Models/nuggetContext.cs" Line="35" Column="13" />
+      <File FileName="OBookStore/Views/AddTo/AddVideo.cshtml" Line="14" Column="1" />
+      <File FileName="OBookStore/Controllers/LearningController.cs" Line="18" Column="3" />
+      <File FileName="OBookStore/Views/Learning/index.cshtml" Line="20" Column="8" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OBookStore" expanded="True">
+            <Node name="OBookStore" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AddTo" expanded="True" />
+                <Node name="Learning" expanded="True">
+                  <Node name="index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.OBookStore PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

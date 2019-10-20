@@ -1,0 +1,178 @@
+﻿@using X.PagedList.Mvc.Core; //import this so we get our HTML Helper
+@using X.PagedList; //import this so we can cast our list to IPagedList (only necessary because ViewBag is dynamic)
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<style>
+
+    .container{
+       
+        width:100%;
+       
+    }
+    .div_filter{
+        left:0;
+        height:90vh;
+        width:10%;
+       
+         position:absolute;
+    }
+
+    .card{
+        width:15%;
+        margin-top:10px;
+    }
+
+    .div_nuggets{
+        position:absolute;
+        margin-left:1%;
+        width:90%;
+    }
+
+    .div_row{
+        margin-top:2%;
+    }
+
+    .a_active_filter{
+        display:none;
+   
+        color:white;
+    }
+    .a_filter{
+        display:none;
+    }
+
+</style>
+
+
+<div class="container">
+
+    <div class="div_filter">
+
+        <div class="div_filter_section">
+            <label class="filter_head">Learning Type</label>
+            <br />
+            <label class="a_filter"><input type="checkbox" />menu</label>
+            
+            
+            <hr />
+        </div>
+        
+        <div class="div_filter_section">
+            <label class="filter_head">Language</label>
+           <br />
+            <label class="a_filter"><input type="checkbox" />menu</label>
+            
+            <hr />
+        </div>
+         <div class="div_filter_section">
+            <label class="filter_head">Tool</label>
+             <br />
+            <label class="a_filter"><input type="checkbox" />menu</label>
+           
+            <hr />
+        </div>
+        <div class="div_filter_section">
+            <label class="filter_head">Concept</label>
+            <br />
+            <label class="a_filter"><input type="checkbox" />menu</label>
+            
+            <hr />
+        </div>
+        
+
+    </div>
+    <div class="div_nuggets" style="border:groove">
+
+
+     @foreach (var item in  ViewBag.OnePageOfProducts) {
+        <div class="div_row">
+
+            <div class="card">
+                <div class="header">
+                    Image
+                </div>
+                <div class="body">
+                    <img src="#" />
+                </div>
+                <div class="foot">
+                    <p class="p_card_body">Some texts will go here.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    Image
+                </div>
+                <div class="body">
+                    <img src="#" />
+                </div>
+                <div class="foot">
+                    <p class="p_card_body">Some texts will go here.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    Image
+                </div>
+                <div class="body">
+                    <img src="#" />
+                </div>
+                <div class="foot">
+                    <p class="p_card_body">Some texts will go here.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="header">
+                    Image
+                </div>
+                <div class="body">
+                    <img src="#" />
+                </div>
+                <div class="foot">
+                    <p class="p_card_body">Some texts will go here.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    Image
+                </div>
+                <div class="body">
+                    <img src="#" />
+                </div>
+                <div class="foot">
+                    <p class="p_card_body">Some texts will go here.</p>
+                </div>
+            </div>
+
+           
+        </div>
+         }
+
+        
+
+
+    </div>
+   
+
+
+
+</div>
+
+
+<script>
+
+    $(document).on("click", ".filter_head", function () {
+    
+        $(this).siblings(".a_filter").toggle();
+
+    });
+</script>
+
+<!-- output a paging control that lets the user navigation to the previous page, next page, etc -->
+@Html.PagedListPager( (IPagedList)ViewBag.OnePageOfProducts, page => Url.Action("Index", new { page }) )
