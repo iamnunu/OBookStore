@@ -1,5 +1,5 @@
-﻿@using X.PagedList.Mvc.Core; //import this so we get our HTML Helper
-@using X.PagedList; //import this so we can cast our list to IPagedList (only necessary because ViewBag is dynamic)
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList; 
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -29,7 +29,7 @@
     .div_nuggets{
         position:absolute;
         margin-left:1%;
-        width:90%;
+        width:60%;
     }
 
     .div_row{
@@ -45,6 +45,21 @@
         display:none;
     }
 
+    .card{
+        width:20%;
+        height:22vh
+    }
+    .img-thumbnail{
+      height: 100%;
+      width: 50%;
+    }
+
+    .header{
+        font-size:12px;
+    }
+    .foot{
+        font-size:12px;
+    }
 </style>
 
 
@@ -52,109 +67,49 @@
 
     <div class="div_filter">
 
-        <div class="div_filter_section">
-            <label class="filter_head">Learning Type</label>
+    @foreach (var item in  ViewBag.Categories) {
+   
+    <div class="div_filter_section" hidden>
+   
+            <label class="filter_head" id="">@item</label>
             <br />
             <label class="a_filter"><input type="checkbox" />menu</label>
             
             
             <hr />
         </div>
+       
+    }
+
         
-        <div class="div_filter_section">
-            <label class="filter_head">Language</label>
-           <br />
-            <label class="a_filter"><input type="checkbox" />menu</label>
-            
-            <hr />
-        </div>
-         <div class="div_filter_section">
-            <label class="filter_head">Tool</label>
-             <br />
-            <label class="a_filter"><input type="checkbox" />menu</label>
-           
-            <hr />
-        </div>
-        <div class="div_filter_section">
-            <label class="filter_head">Concept</label>
-            <br />
-            <label class="a_filter"><input type="checkbox" />menu</label>
-            
-            <hr />
-        </div>
+        
         
 
     </div>
-    <div class="div_nuggets" style="border:groove">
+    <div class="div_nuggets" >
 
-
+    <div class="div_row">
      @foreach (var item in  ViewBag.OnePageOfProducts) {
-        <div class="div_row">
+         <a href="/Learning/Books?ID=@item.Id" >
 
             <div class="card">
                 <div class="header">
-                    Image
+                    @item.Caption
                 </div>
                 <div class="body">
-                    <img src="#" />
+                    <img class="img-thumbnail" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
                 </div>
                 <div class="foot">
-                    <p class="p_card_body">Some texts will go here.</p>
+                    <p class="p_card_body">@item.Name</p>
                 </div>
             </div>
+            
 
-            <div class="card">
-                <div class="header">
-                    Image
-                </div>
-                <div class="body">
-                    <img src="#" />
-                </div>
-                <div class="foot">
-                    <p class="p_card_body">Some texts will go here.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="header">
-                    Image
-                </div>
-                <div class="body">
-                    <img src="#" />
-                </div>
-                <div class="foot">
-                    <p class="p_card_body">Some texts will go here.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="header">
-                    Image
-                </div>
-                <div class="body">
-                    <img src="#" />
-                </div>
-                <div class="foot">
-                    <p class="p_card_body">Some texts will go here.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="header">
-                    Image
-                </div>
-                <div class="body">
-                    <img src="#" />
-                </div>
-                <div class="foot">
-                    <p class="p_card_body">Some texts will go here.</p>
-                </div>
-            </div>
-
-           
-        </div>
+       </a>
+       
          }
 
-        
+            </div> 
 
 
     </div>

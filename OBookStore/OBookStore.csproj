@@ -11,6 +11,10 @@
   <ItemGroup>
     <Folder Include="Views\AddTo\" />
     <Folder Include="Views\Learning\" />
+    <Folder Include="Thumbnails\" />
+    <Folder Include="PageContent\" />
+    <Folder Include="Extraclasses\" />
+    <Folder Include="FileShare\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.0.0" />
@@ -20,6 +24,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="7.9.1" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.0" />
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.7">
+      <AllowExplicitVersion>true</AllowExplicitVersion>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Page.cs" />

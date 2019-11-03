@@ -5,6 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using OBookStore.Models;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.File;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -85,6 +90,66 @@ namespace OBookStore.Controllers
             return Json("Video Added "+video.Name);
         }
 
-       
+
+        public static async Task AzureStorageFileOperation()
+        {
+            const string DemoShare = "";
+            const string DemoDirectory = "";
+            const string ImageToUpload = "";
+
+
+            
+        }
+
+        public JsonResult AddPageContent(string Content)
+        {
+
+            string filename = "";
+            string path = "";
+
+            try
+            {
+                 filename = System.DateTime.Now.ToString().Replace("/", "").Replace(":", "").ToString() + ".html";
+                 path = @"FileShare/";
+               
+                System.IO.File.WriteAllText(path + filename, Content);
+                
+
+            }catch(Exception ex)
+            {
+                return Json(ex.Message);
+            }
+
+            return Json(path + filename);
+        }
+
+        public JsonResult AddPagetoTable(IFormCollection formCollection, int id)
+        {
+
+            try
+            {
+                Video video = new Video();
+                video.Name = formCollection["NAME"];
+                video.Object = Int32.Parse(formCollection["OBJECT"]);
+                video.Caption = formCollection["CAPTION"];
+                video.Path = formCollection["THUMBNAIL"];
+                video.Tags = formCollection["TAGS"];
+                video.Thumbnail = formCollection["CATEGORIES"];
+                video.CreationDate = System.DateTime.Now;
+                video.CreationSource = "Admin";
+                db.Video.Add(video);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message);
+            }
+
+            return Json("success");
+        }
+
+
+
+
     }
 }

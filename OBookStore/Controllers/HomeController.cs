@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OBookStore.Models;
+using OBookStore.Extraclasses;
 
 namespace OBookStore.Controllers
 {
@@ -20,6 +21,8 @@ namespace OBookStore.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Index()
         {
+
+
             return View();
         }
 

@@ -1,27 +1,110 @@
-﻿@page
+@page
 @{
 }
+
+        @{ Layout = null; }
+
 
   <head>
     <meta charset="UTF-8">
     <title>bootstrap4</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<!-- include libraries(jQuery, bootstrap) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+<!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+
+<!-- include summernote css/js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
+
   </head>
+<form id="frm-addarticle">
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2">
+                Add your Articles Here
+            </td>
+        </tr>
+        <tr><br></tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="NAME"/></td>
+        </tr>
+        <tr>
+            <td>OBJECT</td>
+            <td><input type="text" name="OBJECT"/></td>
+        </tr>
+        <tr>
+            <td>CAPTION</td>
+            <td><input type="text" name="CAPTION"/></td>
+        </tr>
+        <tr>
+            <td>THUMBNAIL</td>
+            <td><input type="file" name="THUMBNAIL"/></td>
+        </tr>
+        <tr>
+            <td>TAGS</td>
+            <td><input type="text" name="TAGS"/></td>
+        </tr>
+        <tr>
+            <td>CATEGORIES</td>
+            <td><input type="text" name="CATEGORIES" /></td>
+        </tr>
+       
+    </tbody>
+</table>
+    </form>
 
-    <div id="summernote"></div>
-    <button type="button" >Submit this Content</button>
-    <script>
-      $('#summernote').summernote({
-        placeholder: 'OBookStore Content',
-        tabsize: 2,
-        height: 100
-      });
 
-    </script>
+    <div class="summernote"></div>
+    <button type="button" id="submit" >Submit this Content</button>
+
+<script>
+
+
+    $(".summernote").summernote();
+
+    $("#submit").click(function(){
+       
+        var data = $(".summernote").summernote('code')
+
+        $.ajax({
+            url: "/AddTo/AddPageContent",
+            data: {content:data},
+            success: function (data) {
+                fn_addEntry(data);
+                return data;
+            }
+        });
+    })
+
+      function fn_addEntry(id){
+
+      var data = $("#frm-addarticle").serialize();
+          console.log(data);
+       $.ajax({
+            url: "/AddTo/AddPagetoTable",
+            data: {data,id:id},
+            success: function (data) {
+                
+                return data;
+            }
+        });
+
+  }
+
+</script>
+
+
 
 

@@ -1,0 +1,84 @@
+﻿
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<style>
+    .div-page-content{
+        left:0;
+        width:80%;
+    }
+
+    .div-book-index{
+        top:0;
+        margin-left:80%;
+        width:20%;
+        background:yellow;
+        height:100vh;
+    }
+
+    .div-book-index{
+        display:none;
+    }
+</style>
+
+<body>
+
+    <div class="div-page-content">
+        page content will go here.
+    </div>
+
+    <div class="div-book-index">
+        <div class="div-pageno">
+            <a href="FirstIndex">First Index</a>
+        </div>
+        <hr>
+        <div class="div-pageno">
+            Second Index
+        </div>
+        <hr>
+        <div class="div-pageno">
+            Third Index
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    $(document).ready(function() {
+        fn_getPage();
+    })
+
+  function  fn_getPage(){
+        $.ajax({
+            url: "/Learning/GetPage",
+            data: {Book:@ViewBag.BookId},
+            success: function (data) {
+                $(".div-page-content").html(data);
+                return data;
+            }
+        });
+  }
+
+
+
+    function fn_getBook() {
+        $.ajax({
+            url: "/Learning/getBook",
+            success: function (data) {
+                return data;
+            }
+        });
+    }
+
+    function fn_getIndexes() {
+        $.ajax({
+            url: "/Learning/Indexes",
+            success: function (data) {
+                return data;
+            }
+        });
+    }
+</script>

@@ -6,11 +6,15 @@
     <title>@ViewData["Title"] - Nugget</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<meta name="google-signin-client_id" content="506672154764-514bdtk6t8dvbdidpkrekfdtpp192po2.apps.googleusercontent.com">
+
 
     <style>
 
         .nav-link{
-            font-size:12px;
+            font-size:10px;
         }
        
     </style>
@@ -30,38 +34,45 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Browser All</a>
+                            <a class="nav-link text-white"  href="/Learning" >Browser All</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Web Development</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Web Development" >Web Development</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Data</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Data" >Data</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Cloud & Networking</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Cloud & Networking"  >Cloud & Networking</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Programming</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Programming"  >Programming</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Mobile</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Mobile"  >Mobile</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Game Development</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Game Development"  >Game Development</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">IoT & Hardware</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=IoT & Hardware" >IoT & Hardware</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Security</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Security"  >Security</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Business & Other</a>
+                            <a class="nav-link text-white"  href="/Learning?currentFilter=Business & Other"  >Business & Other</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white"   href="/Learning?currentFilter=Privacy" >Privacy</a>
                         </li>
+                        <li>
+                            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </li>
+                        <li>
+                            <a href="#" onclick="signOut();">Sign out</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>

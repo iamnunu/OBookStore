@@ -291,9 +291,13 @@
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/refs/WindowsBase.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/OBookStore.Views.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/OBookStore.Views.pdb
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Razor.Language.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.Azure.KeyVault.Core.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.Azure.Storage.Blob.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.Azure.Storage.Common.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.CodeAnalysis.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.CodeAnalysis.CSharp.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.CodeAnalysis.Razor.dll
@@ -305,9 +309,15 @@
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.Extensions.DependencyModel.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.Identity.Client.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Newtonsoft.Json.Bson.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/System.Configuration.ConfigurationManager.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/System.Runtime.Caching.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/System.Security.Cryptography.ProtectedData.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.WindowsAzure.Storage.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.Mvc.Core.dll
+/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.Web.Common.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -360,6 +370,7 @@
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/AddTo/Index.cshtml.g.cs
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Home/Index.cshtml.g.cs
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Home/Privacy.cshtml.g.cs
+/Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Learning/Books.cshtml.g.cs
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Learning/index.cshtml.g.cs
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Learning/Video.cshtml.g.cs
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/Razor/Views/Shared/Error.cshtml.g.cs
@@ -373,9 +384,3 @@
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/OBookStore.csproj.CopyComplete
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/OBookStore.dll
 /Users/queen/Projects/OBookStore/OBookStore/obj/Debug/netcoreapp3.0/OBookStore.pdb
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.JsonPatch.dll
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/Newtonsoft.Json.Bson.dll
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.dll
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.Mvc.Core.dll
-/Users/queen/Projects/OBookStore/OBookStore/bin/Debug/netcoreapp3.0/X.PagedList.Web.Common.dll

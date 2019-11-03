@@ -1,24 +1,29 @@
 ﻿<Properties StartupConfiguration="{782C7655-CD6B-43EE-BC2A-783B0854A858}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="OBookStore/Views/Learning/index.cshtml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="OBookStore/Controllers/AddToController.cs" Line="17" Column="9" />
-      <File FileName="OBookStore/Models/nuggetContext.cs" Line="35" Column="13" />
-      <File FileName="OBookStore/Views/AddTo/AddVideo.cshtml" Line="14" Column="1" />
-      <File FileName="OBookStore/Controllers/LearningController.cs" Line="18" Column="3" />
-      <File FileName="OBookStore/Views/Learning/index.cshtml" Line="20" Column="8" />
+      <File FileName="OBookStore/Controllers/LearningController.cs" Line="62" Column="1" />
+      <File FileName="OBookStore/Views/Learning/index.cshtml" Line="91" Column="26" />
+      <File FileName="OBookStore/FileShare/test.html" Line="4" Column="7" />
+      <File FileName="OBookStore/Views/Learning/Books.cshtml" Line="65" Column="1" />
+      <File FileName="OBookStore/Controllers/AddToController.cs" Line="140" Column="37" />
+      <File FileName="OBookStore/Views/Shared/_Layout.cshtml" Line="12" Column="1" />
+      <File FileName="OBookStore/Models/nuggetContext.cs" Line="21" Column="35" />
+      <File FileName="OBookStore/Models/Video.cs" Line="8" Column="22" />
+      <File FileName="OBookStore/Views/AddTo/AddPage.cshtml" Line="97" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OBookStore" expanded="True">
+          <Node name="OBookStore" expanded="True" selected="True">
             <Node name="OBookStore" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="FileShare" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="AddTo" expanded="True" />
-                <Node name="Learning" expanded="True">
-                  <Node name="index.cshtml" selected="True" />
-                </Node>
+                <Node name="Learning" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -30,7 +35,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/queen/Projects/OBookStore/OBookStore/Extraclasses/Azureop.cs" relfile="OBookStore/Extraclasses/Azureop.cs" line="33" column="1" />
+      <Breakpoint file="/Users/queen/Projects/OBookStore/OBookStore/Controllers/AddToController.cs" relfile="OBookStore/Controllers/AddToController.cs" line="145" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
